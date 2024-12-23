@@ -2,7 +2,7 @@
 
 # Define constants
 # Define GitHub repo info
-GITUSER="iamromulan"
+GITUSER="Edgexu"
 REPONAME="quectel-rgmii-toolkit"
 GITTREE="SDXLEMUR"
 GITMAINTREE="SDXLEMUR"
