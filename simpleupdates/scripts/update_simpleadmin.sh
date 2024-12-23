@@ -19,18 +19,6 @@ TMP_SCRIPT="/tmp/install_simpleadmin.sh"
 LOG_FILE="/tmp/install_simpleadmin.log"
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/opt/bin:/opt/sbin:/usrdata/root/bin
 
-# Tmp Script dependent constants 
-SIMPLE_ADMIN_DIR="/usrdata/simpleadmin"
-# Function to remount file system as read-write
-remount_rw() {
-    mount -o remount,rw /
-}
-
-# Function to remount file system as read-only
-remount_ro() {
-    mount -o remount,ro /
-}
-
 # Installation Prep
 remount_rw
 systemctl daemon-reload
