@@ -20,7 +20,6 @@ LOG_FILE="/tmp/install_simpleadmin.log"
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/opt/bin:/opt/sbin:/usrdata/root/bin
 
 # Installation Prep
-remount_rw
 systemctl daemon-reload
 rm $SERVICE_FILE > /dev/null 2>&1
 rm $SERVICE_NAME > /dev/null 2>&1
@@ -43,7 +42,7 @@ cat <<EOF > "$TMP_SCRIPT"
 #!/bin/bash
 
 # Define GitHub repo info
-GITUSER="iamromulan"
+GITUSER="Edgexu"
 REPONAME="quectel-rgmii-toolkit"
 GITTREE="SDXLEMUR"
 GITMAINTREE="SDXLEMUR"
@@ -57,16 +56,6 @@ SIMPLE_ADMIN_DIR="/usrdata/simpleadmin"
 export HOME=/usrdata/root
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/opt/bin:/opt/sbin:/usrdata/root/bin
 
-# Function to remount file system as read-write
-remount_rw() {
-    mount -o remount,rw /
-}
-
-# Function to remount file system as read-only
-remount_ro() {
-    mount -o remount,ro /
-}
-remount_rw
 uninstall_simpleadmin() {
 	echo "Uninstalling Simpleadmin..."
 		
